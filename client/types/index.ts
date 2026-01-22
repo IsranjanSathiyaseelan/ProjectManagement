@@ -5,6 +5,18 @@ export type SidebarLink = {
   path: string
 }
 
+export type Comment = {
+  id: number
+  content: string
+  createdAt: string
+  taskId: number
+  userId: number
+  user: {
+    id: number
+    username: string
+  }
+}
+
 export type Task = {
   id: number
   title: string
@@ -14,9 +26,3 @@ export type Task = {
   status: 'Pending' | 'In Progress' | 'Completed'
 }
 
-export type Comment = {
-  id: number
-  content: string
-  createdAt: string
-  userId: number
-}
